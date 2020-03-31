@@ -1,0 +1,60 @@
+body {
+    background-image: url("../assets/270156.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.card {
+    width: 40rem;
+}
+
+input:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid {
+    border-left: 5px solid #b31b1b;
+}
+
+input:required:valid,
+input:focus:valid,
+textarea:required:valid,
+textarea:focus:valid {
+    border-left: 5px solid #019c01;
+}
+
+button:disabled {
+    background: grey !important;
+    border: grey !important;
+}
+
+#loader {
+    width: 80px;
+    height: 80px;
+    border: 16px solid white;
+    border-top: 16px solid #086da7;
+    border-radius: 50%;
+}
+
+.spin {
+    animation: spinner 1.5s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+label::after {
+    content: "*";
+    color: red;
+}

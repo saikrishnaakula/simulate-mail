@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <main>
+        <article class="card">
+            <header class="card-header bg-danger text-white text-center">
+                <span>Send New Email</span>
+            </header>
+            <main class="card-body">
+                <form id="email-form">
+                    <div class="form-row">
+                        <div class="form-group offset-2 col-8">
+                            <label for="to">To</label>
+                            <input type="email" onkeyup="validate()" placeholder="me@example.com" class="form-control"
+                                id="to" required>
+                        </div>
+                        <div class="form-group offset-2 col-8">
+                            <label for="subject">Subject</label>
+                            <input type="text" onkeyup="validate()" placeholder="subject" class="form-control"
+                                id="subject" required>
+                        </div>
+                        <div class="form-group offset-2 col-8">
+                            <label for="message">Message</label>
+                            <textarea type="text" onkeyup="validate()" placeholder="message" rows="4"
+                                class="form-control" id="message" required></textarea>
+                        </div>
+                        <div class="offset-5">
+                            <div id="loader" class="spin" hidden=true></div>
+                        </div>
+                    </div>
+                    <div class="form-row mt-4">
+                        <div class="offset-1 col-2">
+                            <button type="button" onclick="sendEmail()" id="send" disabled=true
+                                class="btn btn-primary pull-left">Submit
+                            </button>
+                        </div>
+                        <div class="offset-7"></div>
+                        <div class="col-2">
+                            <button type="reset" class="btn btn-danger">Reset
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </article>
+    </main>
+</body>
+
+</html>
